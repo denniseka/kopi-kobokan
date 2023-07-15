@@ -5,6 +5,7 @@ const humburgerMenu = document.querySelector('#humburger-menu');
 
 const btnSearch = document.getElementById('search');
 const searchForm = document.querySelector('.search-form');
+const searchBox = document.querySelector('#search-box');
 
 // klik humburger menu untuk menampilkan navbar
 humburgerMenu.onclick = () => {
@@ -25,4 +26,5 @@ document.addEventListener('click', function (e) {
 
 btnSearch.addEventListener('click', function (e) {
   searchForm.classList.toggle('active');
+  searchBox.focus();
 });

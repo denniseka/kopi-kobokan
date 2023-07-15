@@ -76,12 +76,13 @@ body {
   transition: 0.3s;
 }
 
-.navbar .navbar-extra a {
+.navbar .navbar-extra button {
   color: #fff;
   margin: 0 0.5rem;
+  background: none;
 }
 
-.navbar .navbar-extra a:hover {
+.navbar .navbar-extra button:hover {
   color: var(--primary);
 }
 
@@ -92,6 +93,42 @@ body {
   display: none;
   background: none;
   cursor: pointer;
+}
+
+/* NAVBAR Search Form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  width: 35rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleX(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  background: none;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  margin-right: 1rem;
 }
 /* NAVBAR END */
 
@@ -394,6 +431,14 @@ footer .credit a {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 80%;
+  }
+  .navbar .search-form input {
+    font-size: 150%;
+    padding: 2rem;
   }
   /* Navbar End */
 

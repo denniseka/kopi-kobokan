@@ -194,14 +194,16 @@ body {
 /* About Section */
 .about,
 .menu,
-.contact {
+.contact,
+.products {
   padding: 5rem 7% 1.4rem;
   height: 100vh;
 }
 
 .about h2,
 .menu h2,
-.contact h2 {
+.contact h2,
+.products h2 {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
@@ -210,7 +212,8 @@ body {
 
 .about h2 span,
 .menu h2 span,
-.contact h2 span {
+.contact h2 span,
+.products h2 span {
   color: var(--primary);
 }
 
@@ -249,12 +252,14 @@ body {
 
 /* Menu Section */
 .menu h2,
-.contact h2 {
+.contact h2,
+.products h2 {
   margin-bottom: 0.1rem;
 }
 
 .menu p,
-.contact p {
+.contact p,
+.products p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
@@ -285,6 +290,82 @@ body {
 }
 
 /* Menu Section End */
+
+/* Products Section */
+.products {
+  height: auto;
+}
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.products .product-card {
+  text-align: center;
+  border: 1px solid #666;
+  position: relative;
+}
+
+.products .product-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.products .product-icons a {
+  padding: 1rem;
+  color: #fff;
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .product-icons a:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.products .product-img {
+  margin-bottom: 0.5rem;
+}
+
+.products .product-img img {
+  width: 100%;
+}
+
+.products .product-content h3 {
+  font-size: 1.5rem;
+}
+
+.products .product-content .product-stars {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  color: var(--primary);
+}
+
+.products .product-content .star-full {
+  fill: var(--primary);
+}
+
+.products .product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.products .product-price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+/* Products Section End */
 
 /* Contact Section */
 
@@ -538,4 +619,11 @@ footer .credit a {
   html {
     font-size: 50%;
   }
+
+  /* Product section */
+  .products .product-icons a .icon {
+    width: 4vw;
+    height: 4vw;
+  }
+  /* Product section End */
 }

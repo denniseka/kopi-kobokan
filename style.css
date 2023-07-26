@@ -17,7 +17,7 @@ body {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
   height: 2000px;
@@ -64,7 +64,7 @@ body {
 }
 
 .navbar .navbar-nav a::after {
-  content: '';
+  content: "";
   display: block;
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid var(--primary);
@@ -130,14 +130,75 @@ body {
   cursor: pointer;
   margin-right: 1rem;
 }
+
 /* NAVBAR END */
+
+/* Shopping Card */
+.shopping-card {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: 91vh;
+  width: 35rem;
+  background-color: #fff;
+  padding: 0 1.5rem;
+  color: var(--bg);
+  overflow: auto;
+  transition: 0.5s;
+}
+
+.shopping-card.active {
+  right: 0;
+}
+
+.shopping-card .card-item {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #666;
+}
+
+.shopping-card .card-item img {
+  width: 25%;
+  border-radius: 50%;
+  flex: 1 25%;
+}
+
+.shopping-card .item-detail {
+  flex: 2 55%;
+}
+
+.shopping-card h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5;
+}
+
+.shopping-card .item-price {
+  font-size: 1.1rem;
+}
+.shopping-card .card-item .shopping-icons {
+  width: 100%;
+  display: flex;
+  flex: 1 20%;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.shopping-card .remove-item:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* Shopping Card End */
 
 /* Hero Section  */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('img/bg-coffee.jpg');
+  background-image: url("img/bg-coffee.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -145,13 +206,17 @@ body {
 }
 
 .hero::after {
-  content: ' ';
+  content: " ";
   display: block;
   position: absolute;
   width: 100%;
   height: 30%;
   bottom: 0;
-  background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
 }
 
 .hero .content {

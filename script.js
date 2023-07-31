@@ -10,6 +10,10 @@ const searchBox = document.querySelector("#search-box");
 const shoppingCard = document.querySelector(".shopping-card");
 const btnShopping = document.getElementById("shopping-cart");
 
+const btnItemDetails = document.querySelectorAll(".btn-item-detail");
+const itemDetailModal = document.getElementById("item-detail-modal");
+const btnModalClose = document.getElementById("btn-modal-close");
+
 // klik humburger menu untuk menampilkan navbar
 humburgerMenu.onclick = () => {
   navbarNav.classList.toggle("active");
@@ -38,3 +42,20 @@ btnSearch.addEventListener("click", function (e) {
 btnShopping.addEventListener("click", function (e) {
   shoppingCard.classList.toggle("active");
 });
+
+btnItemDetails.forEach((btn) => {
+  //Menampilkan Modal box detail product
+  btn.addEventListener("click", function (e) {
+    itemDetailModal.style.display = "flex";
+  });
+});
+
+btnModalClose.addEventListener("click", function (e) {
+  itemDetailModal.style.display = "none";
+});
+
+window.onclick = (e) => {
+  if (e.target == itemDetailModal) {
+    itemDetailModal.style.display = "none";
+  }
+};

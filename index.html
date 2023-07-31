@@ -201,8 +201,12 @@
       <div class="row">
         <div class="product-card">
           <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart" class="icon"></i></a>
-            <a href="#"><i data-feather="eye" class="icon"></i></a>
+            <button>
+              <i data-feather="shopping-cart" class="icon"></i>
+            </button>
+            <button class="btn-item-detail">
+              <i data-feather="eye" class="icon"></i>
+            </button>
           </div>
           <div class="product-img">
             <img src="img/products/product.jpg" alt="Product 1" />
@@ -221,8 +225,12 @@
         </div>
         <div class="product-card">
           <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart" class="icon"></i></a>
-            <a href="#"><i data-feather="eye" class="icon"></i></a>
+            <button>
+              <i data-feather="shopping-cart" class="icon"></i>
+            </button>
+            <button class="btn-item-detail">
+              <i data-feather="eye" class="icon"></i>
+            </button>
           </div>
           <div class="product-img">
             <img src="img/products/product.jpg" alt="Product 1" />
@@ -241,28 +249,12 @@
         </div>
         <div class="product-card">
           <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart" class="icon"></i></a>
-            <a href="#"><i data-feather="eye" class="icon"></i></a>
-          </div>
-          <div class="product-img">
-            <img src="img/products/product.jpg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Biji Kopi Kopyor</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-            </div>
-          </div>
-          <div class="product-price">IDR 55K <span>IDR 150k</span></div>
-        </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart" class="icon"></i></a>
-            <a href="#"><i data-feather="eye" class="icon"></i></a>
+            <button>
+              <i data-feather="shopping-cart" class="icon"></i>
+            </button>
+            <button class="btn-item-detail">
+              <i data-feather="eye" class="icon"></i>
+            </button>
           </div>
           <div class="product-img">
             <img src="img/products/product.jpg" alt="Product 1" />
@@ -338,6 +330,39 @@
       </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Product Box Item Detail -->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <button class="close-icon" id="btn-modal-close">
+          <i data-feather="x"></i>
+        </button>
+        <div class="modal-content">
+          <img src="img/products/product.jpg" alt="product 1" />
+          <div class="product-content">
+            <h3>Biji Kopi Kopyor</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus ipsam labore repudiandae praesentium adipisci a iste ad
+              molestias, saepe fugiat, id vel amet quos illum assumenda eius,
+              voluptates earum vitae!
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 55K <span>IDR 150k</span></div>
+            <button>
+              <i data-feather="shopping-cart"></i> <span>add to cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Box Item Detail End -->
 
     <!-- Feather Icons -->
     <script>
